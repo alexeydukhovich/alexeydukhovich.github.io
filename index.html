@@ -6,16 +6,24 @@
         <script>
             function change_button() {
                 let btn = document.getElementById('my_button');
-                btn.className = "btn btn-success";
+                btn.className = "btn btn-success perfect-centering";
                 btn.disabled = true;
-                btn.innerHTML = "<span class=\"glyphicon glyphicon-ok\"></span>"
+                btn.innerHTML = "Токен успешно передан"
                 return false;
             };
         </script>
+        <style>
+            .perfect-centering {
+                 position: absolute;
+                 top: 50%;
+                 left:50%;
+                 transform: translate(-50%,-50%);
+               }
+        </style>
         <title></title>
     </head>
     <body>
-        <button id="my_button" type="button" class="btn btn-primary" onclick="change_button();">
+        <button id="my_button" type="button" class="btn btn-primary perfect-centering" onclick="change_button();">
             Передать токен
         </button>
     </body>
