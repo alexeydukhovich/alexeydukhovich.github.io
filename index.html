@@ -1,10 +1,21 @@
 <html>
     <head>
         <meta content="text/html;charset=UTF-8" http-equiv="Content-Type" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+        <script>
+            document.getElementById('my_button').addEventListener("click", function(event) {
+                let btn = document.getElementById('my_button');
+                btn.className = "btn btn-success";
+                btn.disabled = true;
+                btn.innerHTML = "<span class=\"glyphicon glyphicon-ok\"></span>"
+            });
+        </script>
         <title></title>
     </head>
     <body>
-        <strong>Hello Push!</strong>
+        <button id="my_button" type="button" class="btn btn-primary" onclick="return false;">
+            Передать токен
+        </button>
     </body>
 </html>
